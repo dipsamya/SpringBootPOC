@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>
+		 samyA
+		</title>
+		<link rel="stylesheet" href="css\bootstrap.css">
+	<head>
+	<body>
+		<div class="container"><h2>samya's example...<h2></div>
+		
+		<table class="table">
+			<thead>
+				<tr>
+					<th>authro</th>
+					<th>book</th>
+					<th>url</th>
+					<th>action</th>
+				</tr>
+				<tr>
+					<td><input class="auther_input"></td>
+					<td><input class="book_input"></td>
+					<td><input class="url_input"></td>
+					<td><button class="add_btn">Add</button></td>
+				</tr>
+			</thead>
+			<tbody class="blog-list"></tbody>
+		</table>
+		
+		
+		<script type="text/template" class="list-template">
+			<td><span class="author"><%=author%></td>
+			<td><span class="book"><%=book%></td>
+			<td><span class="url"><%=url%></td>
+			<td><button class="edit_btn">Edit</button>
+			<button class="Delete_btn">Delete</button>
+			</td>
+		</script>
+		<script src="jquery-3.3.1.min.js"></script>
+		<script src="underscore.js"></script>
+		<script src="backbone.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
