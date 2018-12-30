@@ -34,6 +34,7 @@ public class HelloWorld {
 		dataamp.put(poulomi.hashCode(), poulomi);
 		System,out.println("id added..");
 		System.out.println("hashcode of poulomi ="+poulomi.getId()+" here id is the hash code..");
+		System.out.println("ssh is added..");
 	}
 
 	@RequestMapping(method=RequestMethod.GET,value="/hello")
