@@ -33,7 +33,7 @@ public class HelloWorld {
 		poulomi.setId(poulomi.hashCode());
 		dataamp.put(poulomi.hashCode(), poulomi);
 		System,out.println("id added..");
-		System.out.println("hashcode of poulomi ="+poulomi.getId());
+		System.out.println("hashcode of poulomi ="+poulomi.getId()+" here id is the hash code..");
 	}
 
 	@RequestMapping(method=RequestMethod.GET,value="/hello")
