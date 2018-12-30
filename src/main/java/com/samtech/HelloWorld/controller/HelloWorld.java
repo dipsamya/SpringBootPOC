@@ -32,6 +32,7 @@ public class HelloWorld {
 		Persion poulomi=new Persion("poulomi", 24);
 		poulomi.setId(poulomi.hashCode());
 		dataamp.put(poulomi.hashCode(), poulomi);
+		System,out.println("id added..");
 		System.out.println("hashcode of poulomi ="+poulomi.getId());
 	}
 
