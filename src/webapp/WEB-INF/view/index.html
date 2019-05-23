@@ -20,17 +20,17 @@
 					<td><input class="auther_input"></td>
 					<td><input class="book_input"></td>
 					<td><input class="url_input"></td>
-					<td><button class="add_btn">Add</button></td>
+					<td><button id="addBtn" class="add_btn">Add</button></td>
 				</tr>
 			</thead>
 			<tbody class="blog-list"></tbody>
 		</table>
-		
+		<div id="author"></div>
 		
 		<script type="text/template" class="list-template">
-			<td><span class="author"><%=author%></td>
-			<td><span class="book"><%=book%></td>
-			<td><span class="url"><%=url%></td>
+			<td><span class="author"><%= author %></td>
+			<td><span class="title"><%= title %></td>
+			<td><span class="url"><%= url %></td>
 			<td><button class="edit_btn">Edit</button>
 			<button class="Delete_btn">Delete</button>
 			</td>
