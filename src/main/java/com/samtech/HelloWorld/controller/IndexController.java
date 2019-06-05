@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class IndexController {
 	@RequestMapping("/welcome")
 	public String getIndex() {
+		System.out.println("executed---[        main]");
 		ModelAndView mav=new ModelAndView();
 		mav.setViewName("welcome");
 		return "welcome";

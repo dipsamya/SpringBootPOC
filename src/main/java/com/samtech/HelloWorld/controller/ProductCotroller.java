@@ -31,7 +31,7 @@ public class ProductCotroller {
 	@Qualifier("productService")
 	ProductService productService;
 	
-	@RequestMapping(value= "/get-products", method=RequestMethod.GET, produces= {MediaType.APPLICATION_PROBLEM_JSON_VALUE})
+	@RequestMapping(value= "/get-products", method=RequestMethod.GET, produces= {MediaType.APPLICATION_JSON_UTF8_VALUE})
 	public List<Product> getProducts() {
 		System.err.println("request is coming for geting all the product");
 		return productService.getProducts();

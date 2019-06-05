@@ -5,6 +5,11 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Insert title here</title>
+		<script type="text/javascript" src="/jquery-3.3.1.min.js">
+			$('#btn').click(url, data,function(data, status){
+				$('#row').val(data.stringify());
+			});
+		</script>
 	</head>
 	<body>
 		<!-- id:<input type="text" name="id"/><br>
@@ -12,11 +17,10 @@
 			age:<input type="text" name="age"/><br>
 		<br>
 		<input type="submit" name="login" value="login"/> -->
-			<h1>for store persion:</h1><br>
-		<form action="${pageContext.servletContext.contextPath}/add-persion">
-			name:<input type="text" name="name"/><br>
-			age:<input type="text" name="name"/><br>
-			<button type="submit">save</button>>		
-		<form>
+			<h1>For Store Persion:</h1><br>
+			<b>Product Id:</b><input type="text" name="productId" id="p-id"/><br><br>
+			<b>Product Name:</b><input type="text" name="productName" id="p-name"/><br><br>
+			<button id="btn" type="submit">save</button>
+			<div id="row"><div>		
 	</body>
 </html>
