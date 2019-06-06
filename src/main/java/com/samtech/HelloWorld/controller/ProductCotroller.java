@@ -2,6 +2,7 @@ package com.samtech.HelloWorld.controller;
 
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.samtech.HelloWorld.Logging.HelloWorldLogging;
 import com.samtech.HelloWorld.bo.Product;
 import com.samtech.HelloWorld.service.ProductService;
+import com.samtech.exception.ProductNotFoundException;
 
 @RestController
 @RequestMapping("/product")
@@ -35,13 +37,18 @@ public class ProductCotroller {
 	
 	@RequestMapping(value= "/{id}", method=RequestMethod.GET, produces= {MediaType.APPLICATION_PROBLEM_JSON_VALUE})
 	public Product getProduct(@PathVariable("id") int id) {
+		
 		logger.debug("Request is comming for getting the product");
+		if(id>=0) {
+			throw new ProductNotFoundException("product not found");
+		}
 		return productService.getProduct(id);
 	}
 	
 	@PutMapping(path="/update", produces= {MediaType.APPLICATION_JSON_VALUE} , consumes= {MediaType.APPLICATION_JSON_VALUE})
 	public Product updateProduct(@RequestBody Product p) {
 		logger.debug("Request is comming on inside upadate product");
+		
 		return productService.upadateProduct(p);
 		
 	}
