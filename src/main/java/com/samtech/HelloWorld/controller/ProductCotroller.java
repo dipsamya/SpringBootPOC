@@ -15,35 +15,41 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.samtech.HelloWorld.Logging.HelloWorldLogging;
 import com.samtech.HelloWorld.bo.Product;
 import com.samtech.HelloWorld.service.ProductService;
 
 @RestController
 @RequestMapping("/product")
 public class ProductCotroller {
+	private static final HelloWorldLogging logger = HelloWorldLogging.getLogger(ProductCotroller.class);
 	@Autowired
 	@Qualifier("productService")
 	ProductService productService;
 	
 	@RequestMapping(value= "/get-products", method=RequestMethod.GET, produces= {MediaType.APPLICATION_JSON_UTF8_VALUE})
 	public List<Product> getProducts() {
-		System.err.println("request is coming for geting all the product");
+		logger.info("Request is Comming for getting all the product");
 		return productService.getProducts();
 	}
 	
 	@RequestMapping(value= "/{id}", method=RequestMethod.GET, produces= {MediaType.APPLICATION_PROBLEM_JSON_VALUE})
 	public Product getProduct(@PathVariable("id") int id) {
-		System.err.println("request is coming for geting the product- id -->"+id);
+		logger.debug("Request is comming for getting the product");
 		return productService.getProduct(id);
 	}
 	
 	@PutMapping(path="/update", produces= {MediaType.APPLICATION_JSON_VALUE} , consumes= {MediaType.APPLICATION_JSON_VALUE})
 	public Product updateProduct(@RequestBody Product p) {
+		logger.debug("Request is comming on inside upadate product");
 		return productService.upadateProduct(p);
+		
 	}
 	
 	@PostMapping(path="/save", produces= {MediaType.APPLICATION_JSON_VALUE}, consumes= {MediaType.APPLICATION_JSON_VALUE})
 	public String saveProduct(@RequestBody Product p) {
+		
+		logger.debug("Request is comming Save product ");
 		return productService.saveProduct(p) + " row inserted" ;
 	}
 	@DeleteMapping(path="/delete/{id}")
