@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="ConsoleAppender"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{MM-dd-yyyy HH:mm:ss:sss} %-5p  %-30C %-30M %-5L  %-5p   %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="RollingAppender"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="DatePattern" value="'.'MM-dd-yyyy" />
+		<param name="File" value="/drivez/drivez.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{MM-dd-yyyy HH:mm:ss:sss} %-5p  %-75C %-50M %-5L  %-5p   %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="DEBUG" />
+			<param name="levelMax" value="ERROR" />
+		</filter>
+	</appender>
+
+	<appender name="ErrorRollingAppender"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="DatePattern" value="'.'MM-dd-yyyy" />
+		<param name="File" value="/drivez/drivez.err" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{MM-dd-yyyy HH:mm:ss:sss} %-5p  %-75C %-50M %-5L  %-5p   %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="WARN" />
+			<param name="levelMax" value="ERROR" />
+		</filter>
+	</appender>
+
+	<root>
+		<priority value="ALL" />
+		<appender-ref ref="ConsoleAppender"/>
+		<appender-ref ref="RollingAppender" />
+		<appender-ref ref="ErrorRollingAppender" />
+	</root>
+
+</log4j:configuration>
+
+
+
+
+
+
+

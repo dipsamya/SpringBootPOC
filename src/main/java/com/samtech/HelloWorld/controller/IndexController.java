@@ -6,6 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class IndexController {
+	
 	@RequestMapping("/welcome")
 	public String getIndex() {
 		System.out.println("executed---[        main]");
