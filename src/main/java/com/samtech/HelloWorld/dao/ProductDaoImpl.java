@@ -5,16 +5,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.samtech.HelloWorld.Logging.HelloWorldLogging;
 import com.samtech.HelloWorld.bo.Product;
 @Repository
 public class ProductDaoImpl implements ProductDao{
-	private static final HelloWorldLogging logger = HelloWorldLogging.getLogger(ProductDaoImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(ProductDaoImpl.class);
 	private final String ALL_PRODUCT="select * from product1";
 	private final String PRODUCT_BY_ID="select * from product1 where id = ?";
 	private final String UPDATE_PRODUCT="update Product1 set name = ? where id = ?";
@@ -52,7 +53,7 @@ public class ProductDaoImpl implements ProductDao{
 	public int insertProduct(Product p) {
 		int i=jdbcTemplate.update(INSERT_PRODUCT, new Object[] {p.getProductId(),p.getProductName()});
 		System.err.println("\n"+ i  + "row is inserted.");
-		logger.info(ALL_PRODUCT);
+		
 		return i;
 	}
 	

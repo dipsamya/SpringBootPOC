@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
@@ -16,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.samtech.HelloWorld.Logging.HelloWorldLogging;
 import com.samtech.HelloWorld.bo.Product;
 import com.samtech.HelloWorld.service.ProductService;
 import com.samtech.exception.ProductNotFoundException;
@@ -24,7 +25,7 @@ import com.samtech.exception.ProductNotFoundException;
 @RestController
 @RequestMapping("/product")
 public class ProductCotroller {
-	private static final HelloWorldLogging logger = HelloWorldLogging.getLogger(ProductCotroller.class);
+	private static final Logger logger = LoggerFactory.getLogger(ProductCotroller.class);
 	@Autowired
 	@Qualifier("productService")
 	ProductService productService;
@@ -61,6 +62,7 @@ public class ProductCotroller {
 	}
 	@DeleteMapping(path="/delete/{id}")
 	public String deleteProduct(@PathVariable("id") int id) {
+		
 		return productService.deleteProduct(id) + " row deleted";
 	}
 }
