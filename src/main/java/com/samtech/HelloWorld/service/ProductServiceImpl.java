@@ -8,12 +8,14 @@ import org.springframework.stereotype.Service;
 
 import com.samtech.HelloWorld.bo.Product;
 import com.samtech.HelloWorld.dao.ProductDao;
+import com.samtech.HelloWorld.dao.ProductDaoImpl;
 @Service
 @Qualifier("productService")
 public class ProductServiceImpl implements ProductService {
+	//@Autowired
+	//ProductDao productDao;
 	@Autowired
-	ProductDao productDao;
-	
+	ProductDaoImpl productDao;
 	@Override
 	public List getProducts() {
 		return productDao.getProducts();

@@ -1,0 +1,36 @@
+2019-06-07 12:12:48,270 INFO com.samtech.HelloWorld.HelloWorldApplication [main] Starting HelloWorldApplication on ARYAN with PID 7316 (D:\springbootPOC\SpringBootPOC\target\classes started by VIKASH in D:\springbootPOC\SpringBootPOC)
+2019-06-07 12:12:48,277 INFO com.samtech.HelloWorld.HelloWorldApplication [main] No active profile set, falling back to default profiles: default
+2019-06-07 12:12:53,368 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2019-06-07 12:12:53,369 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-06-07 12:12:53,393 INFO org.apache.catalina.core.AprLifecycleListener [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;F:\SRIMAN_CLASS_METERIAL\Tools\jar bundles\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk1.8.0_162;F:\SRIMAN_CLASS_METERIAL\Tools\jar bundles\apache-ant-1.10.5\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_162\bin;.;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\VIKASH\AppData\Local\GitHubDesktop\bin;G:\realtimeproject\projectData\sts-bundle\sts-3.9.7.RELEASE;;.]
+2019-06-07 12:12:54,189 INFO org.apache.jasper.servlet.TldScanner [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-06-07 12:12:54,213 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-06-07 12:12:54,796 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-06-07 12:12:55,422 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-06-07 12:12:55,922 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-07 12:12:56,196 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2019-06-07 12:12:56,199 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-06-07 12:12:56,321 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-07 12:12:56,672 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-06-07 12:12:59,925 INFO com.samtech.HelloWorld.HelloWorldApplication [main] Started HelloWorldApplication in 12.752 seconds (JVM running for 13.835)
+2019-06-07 12:13:22,375 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8085-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-07 12:18:10,836 INFO com.samtech.HelloWorld.HelloWorldApplication [main] Starting HelloWorldApplication on ARYAN with PID 5640 (D:\springbootPOC\SpringBootPOC\target\classes started by VIKASH in D:\springbootPOC\SpringBootPOC)
+2019-06-07 12:18:10,844 INFO com.samtech.HelloWorld.HelloWorldApplication [main] No active profile set, falling back to default profiles: default
+2019-06-07 12:18:16,692 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2019-06-07 12:18:16,693 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-06-07 12:18:16,722 INFO org.apache.catalina.core.AprLifecycleListener [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;F:\SRIMAN_CLASS_METERIAL\Tools\jar bundles\apache-maven-3.6.0\bin;C:\Program Files\Java\jdk1.8.0_162;F:\SRIMAN_CLASS_METERIAL\Tools\jar bundles\apache-ant-1.10.5\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_162\bin;.;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\VIKASH\AppData\Local\GitHubDesktop\bin;G:\realtimeproject\projectData\sts-bundle\sts-3.9.7.RELEASE;;.]
+2019-06-07 12:18:17,614 INFO org.apache.jasper.servlet.TldScanner [localhost-startStop-1] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-06-07 12:18:17,633 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-06-07 12:18:18,203 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-06-07 12:18:19,200 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-06-07 12:18:19,962 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-07 12:18:20,356 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2019-06-07 12:18:20,363 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-06-07 12:18:20,546 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-07 12:18:21,038 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-06-07 12:18:24,563 INFO com.samtech.HelloWorld.HelloWorldApplication [main] Started HelloWorldApplication in 14.786 seconds (JVM running for 15.834)
+2019-06-07 12:18:29,998 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8085-exec-1] Initializing Spring FrameworkServlet 'dispatcherServlet'
